@@ -1,0 +1,11 @@
+# Here is the block of code I place at the end of the .xinitrc file.  See the arch wiki xinit page.
+#
+# xmonad is the default
+session=${1:-xmonad}
+
+case $session in
+    xmonad          ) xterm & exec xmonad;; #this launches xmonad with xterm loaded (optional)
+    openbox         ) exec openbox-session;;
+# or in the event an unknown is entered, try to run the default
+    *               ) exec $1;;
+esac
