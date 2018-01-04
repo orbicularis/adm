@@ -1,0 +1,6 @@
+# This is the code I placed at the end of my /etc/profile
+#
+# Welcome the user and remind them that adm is available
+user=${USER}
+userFix=${user:0:1}
+printf "\nWelcome ${userFix^}${user:1}\nEnter 'adm' to launch the display manager\n\n"
